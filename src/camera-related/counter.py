@@ -37,6 +37,19 @@ class DataRecord:  # Class names should follow PascalCase
         with open("data.json", "w") as file:
             json.dump(self.data, file, indent=4)
 
+
+# counter.py
+class PeopleCounter:
+    def __init__(self, line_position):
+        self.line_position = line_position
+        self.enter = 0
+        self.exit = 0
+
+    def process_frame(self, frame):
+        # Code to process the frame and update enter/exit counts
+        return self.enter, self.exit
+
+
 # Example usage
 record = DataRecord()
 
